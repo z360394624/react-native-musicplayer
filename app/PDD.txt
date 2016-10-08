@@ -1,0 +1,5 @@
+=>关于开发环境搭建
+  =>autobind-decorator用于this绑定依赖库
+  =>装饰器编译库  babel-plugin-transform-decorators-legacy
+  =>babel-preset-react-native
+  =>需要 .babelrc文件
