@@ -71,3 +71,7 @@
   - 在服务端预先处理好   转换成base64数据
   - {{uri: base64}}
   - 编码解码base64   https://github.com/riyadhalnur/node-base64-image/blob/master/docs/docs.md
+
+
+### 一些认识
+  - [x] redux-persist 传入数据库引擎对象满足一定标准的就可以  然后就会进行操作

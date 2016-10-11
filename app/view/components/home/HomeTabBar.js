@@ -3,20 +3,21 @@ import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native
 import Icon from 'react-native-vector-icons/Ionicons'
 
 
-export default class UserPage extends Component{
+export default class HomeTabBar extends Component{
 
   constructor(){
     super()
   }
   render(){
     return(
-      <View style={styles.container}><Text>user</Text></View>
+      <View style={styles.container}></View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    
+    height:60,
+    backgroundColor:'red'
   }
 })

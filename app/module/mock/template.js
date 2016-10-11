@@ -4,9 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 
 export default class Label extends Component{
-  static propTypes={
-    height: PropTypes.number.isRequired
-  }
+
   constructor(){
     super()
   }
