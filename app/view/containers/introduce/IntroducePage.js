@@ -73,7 +73,7 @@ export default class WelcomePage extends Component{
   }
   @autobind
   turnToHomePage(){
-    console.log('onpress')
+    this.props.changeState('homepage')
   }
 }
 

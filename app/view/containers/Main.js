@@ -7,7 +7,7 @@ import DataRepository from '../../module/dao/api'
 import showToast from '../components/toast/Toast'
 import IntroducePage from './introduce/IntroducePage'
 import SplashScreenPage from './introduce/SplashScreenPage'
-import HomePage from './HomePage'
+import AppRouter from './AppRouter'
 
 
 
@@ -40,7 +40,7 @@ export default class RNMusicPlayer extends Component {
     const introList = this.state.introList
     switch (this.state.showModule) {
       case 'introPage': {
-        return (<IntroducePage introList={introList}/>)
+        return (<IntroducePage introList={introList} changeState={this.changeState}/>)
       }
         break
       case 'splashScreen': {
@@ -48,10 +48,14 @@ export default class RNMusicPlayer extends Component {
       }
         break
       case 'homepage': {
-        return(<HomePage />)
+        return(<AppRouter />)
       }
       default: return(<View></View>)
     }
+  }
+  @autobind
+  changeState(module){
+    this.setState({showModule:module})
   }
 }
 

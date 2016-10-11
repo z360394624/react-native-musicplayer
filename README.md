@@ -17,6 +17,7 @@
 - [x] 关于this绑定问题解决方案(有时候会出现引用this为undefine)  https://github.com/andreypopp/autobind-decorator
 - [x] 炫酷button样式库 https://github.com/APSL/react-native-button(相比较另外一个库,更多的操作空间)
 - [x] 缓存图片库 避免多次访问相同uri的图片资源 https://github.com/remobile/react-native-cache-image
+- [x] 用路由的方式写导航  https://github.com/starlight36/react-native-navigator-router 
 
 
 
