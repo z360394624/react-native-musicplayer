@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight, Image, Switch  } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 
@@ -11,16 +11,17 @@ export default class Label extends Component{
     showArrow: PropTypes.bool.isRequired,
     showTip: PropTypes.bool.isRequired,
     labelName:PropTypes.string.isRequired,
-    tipText: PropTypes.number
+    tipText: PropTypes.number,
+    showSwitch: PropTypes.bool
   }
   constructor(){
     super()
   }
   render(){
-    const { height, iconName, iconSize, labelName, showTip, tipText, showArrow } = this.props
+    const { height, iconName, iconSize, labelName, showTip, tipText, showArrow, showSwitch } = this.props
     return(
       <TouchableHighlight
-        underlayColor="#b7bbb9"
+        underlayColor="#e3e5e5"
         activeOpacity={1}
         onPress={() => {}}>
         <View style={[styles.container, {height: height}]}>
@@ -33,6 +34,9 @@ export default class Label extends Component{
           }
           {
             showArrow && (<View style={[styles.iconNav, {width: 30}]}><Icon size={iconSize} name="ios-arrow-forward" color="#000"></Icon></View>)
+          }
+          {
+            showSwitch && (<View style={[styles.iconNav, {width: 40}]}><Switch onValueChange={() => {}} value={true}></Switch></View>)
           }
         </View>
       </TouchableHighlight>
@@ -60,5 +64,8 @@ const styles = StyleSheet.create({
   textNav:{
     width:30,
     justifyContent:'center'
+  },
+  switchNav:{
+
   }
 })

@@ -38,12 +38,24 @@ export default class Drawer extends Component{
           <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
           <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
           <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
-          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label showSwitch={true} height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
         </ScrollView>
         <View style={styles.operaBar}>
-          <View style={[styles.operaButton,styles.leftButton]}><Text>设置</Text></View>
+          <TouchableHighlight
+            underlayColor="#e3e5e5"
+            activeOpacity={1}
+            onPress={() => {}}
+            style={[styles.operaButton,styles.leftButton]}>
+            <Text>设置</Text>
+          </TouchableHighlight>
           <View style={{width:1,backgroundColor:'#e3e5e5'}}></View>
-          <View style={styles.operaButton}><Text>退出</Text></View>
+          <TouchableHighlight
+            underlayColor="#e3e5e5"
+            activeOpacity={1}
+            onPress={() => {}}
+            style={styles.operaButton}>
+            <Text>退出</Text>
+          </TouchableHighlight>
         </View>
       </View>
     )
