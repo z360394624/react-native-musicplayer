@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight, Image, ScrollView  } from 'react-native'
 import Avatar from '../Avatar'
 import Icon from 'react-native-vector-icons/Ionicons'
+import Label from '../Label'
+
 
 export default class Drawer extends Component{
   constructor(){
@@ -25,6 +27,24 @@ export default class Drawer extends Component{
             </TouchableHighlight>
           </View>
         </Image>
+        <ScrollView>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+          <Label height={50} tipText={11} labelName={"ceshiceshi"} iconSize={25} iconName="ios-chatboxes-outline" showTip={true} showArrow={true}/>
+        </ScrollView>
+        <View style={styles.operaBar}>
+          <View style={[styles.operaButton,styles.leftButton]}><Text>设置</Text></View>
+          <View style={{width:1,backgroundColor:'#e3e5e5'}}></View>
+          <View style={styles.operaButton}><Text>退出</Text></View>
+        </View>
       </View>
     )
   }
@@ -75,5 +95,21 @@ const styles = StyleSheet.create({
     flex:2,
     textAlign:'center',
     paddingTop:2
+  },
+  operaBar:{
+    height:50,
+    backgroundColor:'#ffffff',
+    flexDirection:'row'
+  },
+  operaButton:{
+    flex:1,
+    borderTopWidth:1,
+    borderColor:'#e3e5e5',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  leftButton:{
+    borderLeftWidth:1,
+    borderColor:'#e3e5e5',
   }
 })

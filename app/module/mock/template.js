@@ -1,0 +1,24 @@
+import React, { Component, PropTypes } from 'react'
+import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
+import Icon from 'react-native-vector-icons/Ionicons'
+
+
+export default class Label extends Component{
+  static propTypes={
+    height: PropTypes.number.isRequired
+  }
+  constructor(){
+    super()
+  }
+  render(){
+    return(
+      <View style={styles.container}></View>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    
+  }
+})
