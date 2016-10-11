@@ -8,7 +8,6 @@ export default function showToast(text) {
     AlertIOS.alert(text)
     return
   }
-  console.log('get in')
   const ToastAndroid = RN.ToastAndroid
   ToastAndroid.showWithGravity(text, 2000, ToastAndroid.CENTER)
 }

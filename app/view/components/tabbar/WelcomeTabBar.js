@@ -15,7 +15,6 @@ export default class WelcomeTabBar extends Component{
   }
   render(){
     const { tabs } = this.props
-    console.log(this.props)
     return(
       <View style={[this.props.style, styles.container]}>
         <View style={styles.tabBox}>

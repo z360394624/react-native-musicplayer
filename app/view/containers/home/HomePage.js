@@ -1,21 +1,22 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, TouchableHighlight  } from 'react-native'
+import { connect } from 'react-redux'
 
-
-
+@connect((state) => {
+  console.log(state)
+  return{
+    music: state.music
+  }
+})
 
 export default class HomePage extends Component{
-  static contextTypes = {
-    router: React.PropTypes.object.isRequired
-  }
   constructor(){
     super()
   }
 
   render(){
     return(
-      <View style={{flex:1,backgroundColor:'red'}}><TouchableHighlight
-       onPress={() => this.context.router.push('/friends')}><Text>press</Text></TouchableHighlight></View>
+      <View style={{flex:1,backgroundColor:'red'}}><Text>homepage</Text></View>
     )
   }
 }

@@ -38,7 +38,6 @@ export default class WelcomePage extends Component{
           {
             introList.map((tab, tabIndex) => {
               let isActive = tabIndex+1
-              console.log(tab.imgUrl)
               return(
                 <View style={styles.tab} tabLabel={tab.tabName} key={uuid()}>
                   <View style={styles.textNav}>
