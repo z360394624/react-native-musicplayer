@@ -7,7 +7,7 @@ import DataRepository from '../../module/dao/api'
 import showToast from '../components/toast/Toast'
 import IntroducePage from './introduce/IntroducePage'
 import SplashScreenPage from './introduce/SplashScreenPage'
-import AppRouter from './AppRouter'
+import AppNavigator from './AppNavigator'
 
 
 
@@ -48,7 +48,7 @@ export default class RNMusicPlayer extends Component {
       }
         break
       case 'homepage': {
-        return(<AppRouter />)
+        return(<AppNavigator />)
       }
       default: return(<View></View>)
     }

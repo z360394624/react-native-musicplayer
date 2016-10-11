@@ -14,8 +14,8 @@ export default class HomePage extends Component{
 
   render(){
     return(
-      <View><TouchableHighlight
-       onPress={() => this.context.router.push('/user/friends')}><Text>press</Text></TouchableHighlight></View>
+      <View style={{flex:1,backgroundColor:'red'}}><TouchableHighlight
+       onPress={() => this.context.router.push('/friends')}><Text>press</Text></TouchableHighlight></View>
     )
   }
 }

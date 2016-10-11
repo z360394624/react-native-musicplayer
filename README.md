@@ -17,11 +17,15 @@
 - [x] 关于this绑定问题解决方案(有时候会出现引用this为undefine)  https://github.com/andreypopp/autobind-decorator
 - [x] 炫酷button样式库 https://github.com/APSL/react-native-button(相比较另外一个库,更多的操作空间)
 - [x] 缓存图片库 避免多次访问相同uri的图片资源 https://github.com/remobile/react-native-cache-image
-- [x] 用路由的方式写导航  https://github.com/starlight36/react-native-navigator-router 
+- [x] 用路由的方式写导航  https://github.com/starlight36/react-native-navigator-router(试了一下  感觉还是有一些问题) 
+- [x] 关于进度条动画的依赖库  https://github.com/maxs15/react-native-spinkit
+- [x] redux store自动化持久框架   https://github.com/rt2zz/redux-persist
+- [x] navbar组件库  https://github.com/react-native-community/react-native-navbar(个人认为这个还是自己写的好,方便定制)
 
-
-
-
+# Demo
+- [x] 知乎日报移动版  https://github.com/race604/ZhiHuDaily-React-Native (ios and android)
+- [x] 干货集中营  https://github.com/iwgang/GankCamp-React-Native (ios and android)
+- [x] 
 
 
 # Solution

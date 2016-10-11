@@ -18,7 +18,7 @@ export default class FriendsPage extends Component{
 
 const styles = StyleSheet.create({
   container:{
-    backgroundColor:'#ffffff',
+    backgroundColor:'blue',
     flex:1
   }
 })
