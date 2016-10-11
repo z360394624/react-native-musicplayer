@@ -18,7 +18,7 @@ export default class RNMusicPlayer extends Component {
     super()
 
     this.state = {
-      showModule: 'splashScreen',
+      showModule: 'homepage',
       introList: []
     }
   }
@@ -50,7 +50,7 @@ export default class RNMusicPlayer extends Component {
       case 'homepage': {
         return(<AppNavigator />)
       }
-      default: return(<View></View>)
+      default: null
     }
   }
   @autobind

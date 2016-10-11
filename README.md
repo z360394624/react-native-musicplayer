@@ -2,10 +2,9 @@
 
 # Tech
 - [x] react-native
-- [ ] 引入数据状态管理redux
+- [x] 引入数据状态管理redux
 - [ ] 引入数据库realm
-- [ ] 引入redux持久库 redux-pressist
-- [ ] 
+- [x] 引入redux持久库 redux-pressist(这个还不知道怎么用)
 
 # Source
 - [x] 滚动tabview  https://github.com/skv-headless/react-native-scrollable-tab-view
@@ -21,11 +20,12 @@
 - [x] 关于进度条动画的依赖库  https://github.com/maxs15/react-native-spinkit
 - [x] redux store自动化持久框架   https://github.com/rt2zz/redux-persist
 - [x] navbar组件库  https://github.com/react-native-community/react-native-navbar(个人认为这个还是自己写的好,方便定制)
+- [x] 图片等内容轮播组件  https://github.com/leecade/react-native-swiper
 
 # Demo
 - [x] 知乎日报移动版  https://github.com/race604/ZhiHuDaily-React-Native (ios and android)
 - [x] 干货集中营  https://github.com/iwgang/GankCamp-React-Native (ios and android)
-- [x] 
+- [x] 关于react-native各种资料汇集  https://github.com/reactnativecn/react-native-guide
 
 
 # Solution

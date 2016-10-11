@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TouchableHighlight  } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight, DrawerLayoutAndroid  } from 'react-native'
 import { connect } from 'react-redux'
+import autobind from 'autobind-decorator'
+import Drawer from '../../components/home/Drawer'
+
+
+
 
 @connect((state) => {
-  console.log(state)
   return{
     music: state.music
   }
 })
-
 export default class HomePage extends Component{
   constructor(){
     super()
@@ -16,7 +19,20 @@ export default class HomePage extends Component{
 
   render(){
     return(
-      <View style={{flex:1,backgroundColor:'red'}}><Text>homepage</Text></View>
+      <DrawerLayoutAndroid
+        drawerWidth={300}
+        drawerPosition={DrawerLayoutAndroid.positions.Left}
+        renderNavigationView={() => <Drawer />}>
+          <Text>xx</Text>
+        </DrawerLayoutAndroid>
     )
   }
 }
+
+
+const styles = StyleSheet.create({
+  drawerContainer: {
+    flex:1,
+    backgroundColor:'red'
+  }
+})
