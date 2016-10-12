@@ -9,3 +9,11 @@ export function newMusic(musiclist){
     musiclist: musiclist
   }
 }
+
+
+export function initNavigator(navigator){
+  return{
+    type: Types.INITNAVIGATOR,
+    navigator: navigator
+  }
+}

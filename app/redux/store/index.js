@@ -21,7 +21,7 @@ let middlewares = [
 let createAppStore = applyMiddleware(...middlewares)(createStore);
 
 
-export default function configureStore(onComplete: ()=>void){
+function configureStore(onComplete: ()=>void){
   const store = autoRehydrate()(createAppStore)(reducers);
   let opt = {
     storage: AsyncStorage,
@@ -31,3 +31,7 @@ export default function configureStore(onComplete: ()=>void){
   persistStore(store, opt, onComplete);
   return store;
 }
+export const store = configureStore()
+let getState = store.getState
+let disPatch = store.disPatch
+export { getState, disPatch }

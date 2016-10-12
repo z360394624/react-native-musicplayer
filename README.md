@@ -21,6 +21,11 @@
 - [x] redux store自动化持久框架   https://github.com/rt2zz/redux-persist
 - [x] navbar组件库  https://github.com/react-native-community/react-native-navbar(个人认为这个还是自己写的好,方便定制)
 - [x] 图片等内容轮播组件  https://github.com/leecade/react-native-swiper
+- [x] 文件上传下载依赖库  https://github.com/wkh237/react-native-fetch-blob/wiki/File-System-Access-API#createfilepath-data-encodingpromise
+- [x] 运行时权限给定库 https://github.com/lucasferreira/react-native-android-permissions
+- [x] 文件选择器控件  https://github.com/johanneslumpe/react-native-fs
+- [x] 图片选择器控件  https://github.com/marcshilling/react-native-image-picker
+- [x] 炫酷弹出planblank窗口屏 https://github.com/kirkness/react-native-fs-modal
 
 # Demo
 - [x] 知乎日报移动版  https://github.com/race604/ZhiHuDaily-React-Native (ios and android)
@@ -75,3 +80,5 @@
 
 ### 一些认识
   - [x] redux-persist 传入数据库引擎对象满足一定标准的就可以  然后就会进行操作
+
+
