@@ -9,7 +9,7 @@ import MusicPage from '../music/MusicPage'
 import LocalPage from '../local/LocalPage'
 import UserPage from '../user/UserPage'
 import Player from '../../components/player/Player'
-
+import realm from '../../../realm/realm'
 
 
 
@@ -25,17 +25,15 @@ export default class HomePage extends Component{
   }
 
   componentDidMount(){
-    setTimeout(() => {
-    //   AsyncStorage.getItem('xxx')
-    // .then((data) => {
-    //   console.log(data)
-    // })
-    AsyncStorage.getAllKeys()
-    .then((data) => {
-      console.log(data)
+    realm.write(() => {
+      // realm.create('Car', {id: 1, car_type:'QQ', car_name: 'sb001', driver_name:'pdd'})
+      // realm.create('Car', {id: 2, car_type: '宝马', car_name: 'SB002', driver_name: '李四'});
+      // realm.create('Car', {id: 3, car_type: '奔驰', car_name: 'SB003', driver_name: '王五'});
     })
-    }, 5000)
 
+    let cars = realm.objects('Car')
+    console.log(cars.length)
+    console.log(cars[0].driver_name)
   }
   render(){
     return(

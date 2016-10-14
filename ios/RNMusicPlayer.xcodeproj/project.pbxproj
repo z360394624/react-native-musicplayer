@@ -25,6 +25,9 @@
 		C6FD3D298FD64D8E9C942A0A /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6678B4B707D494FAF75E4EA /* libSplashScreen.a */; };
 		3217BCBB3EC04F0EB6E058C4 /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0D78C6B3B148C88800BC5A /* libRNFetchBlob.a */; };
 		DAF491FF26284D769312617D /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1AE00ACB4443E92A1214D /* libRNFS.a */; };
+		01FF4061917D4C4D9E1FED2B /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3364BAC13524B8BAA96E11F /* libRealmReact.a */; };
+		0DCBF352A8044F00B5F56AB9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 587BCF285859469A8B2AACB6 /* libc++.tbd */; };
+		87EFFCD5A0344F0BA82A7F60 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 129C17DA9AA74D90B1E022DF /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +138,10 @@
 		BF0D78C6B3B148C88800BC5A /* libRNFetchBlob.a */ = {isa = PBXFileReference; name = "libRNFetchBlob.a"; path = "libRNFetchBlob.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		41533E1210F348AF9314C402 /* RNFS.xcodeproj */ = {isa = PBXFileReference; name = "RNFS.xcodeproj"; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		DAA1AE00ACB4443E92A1214D /* libRNFS.a */ = {isa = PBXFileReference; name = "libRNFS.a"; path = "libRNFS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3BD79EB669804A098FF001D1 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; name = "RealmReact.xcodeproj"; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C3364BAC13524B8BAA96E11F /* libRealmReact.a */ = {isa = PBXFileReference; name = "libRealmReact.a"; path = "libRealmReact.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		587BCF285859469A8B2AACB6 /* libc++.tbd */ = {isa = PBXFileReference; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		129C17DA9AA74D90B1E022DF /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +170,9 @@
 				C6FD3D298FD64D8E9C942A0A /* libSplashScreen.a in Frameworks */,
 				3217BCBB3EC04F0EB6E058C4 /* libRNFetchBlob.a in Frameworks */,
 				DAF491FF26284D769312617D /* libRNFS.a in Frameworks */,
+				01FF4061917D4C4D9E1FED2B /* libRealmReact.a in Frameworks */,
+				0DCBF352A8044F00B5F56AB9 /* libc++.tbd in Frameworks */,
+				87EFFCD5A0344F0BA82A7F60 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +298,7 @@
 				DB2D33B29BB04F53BDB220D2 /* SplashScreen.xcodeproj */,
 				A77AE2BEF023458CB7A68599 /* RNFetchBlob.xcodeproj */,
 				41533E1210F348AF9314C402 /* RNFS.xcodeproj */,
+				3BD79EB669804A098FF001D1 /* RealmReact.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -307,6 +318,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNMusicPlayerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				44C2ECD9C9C44EA9954D4DB3 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -319,6 +331,16 @@
 				00E356EE1AD99517003FC87E /* RNMusicPlayerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		44C2ECD9C9C44EA9954D4DB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				587BCF285859469A8B2AACB6 /* libc++.tbd */,
+				129C17DA9AA74D90B1E022DF /* libz.tbd */,
+			);
+			name = Frameworks;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -605,6 +627,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -621,6 +644,7 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNMusicPlayer.app/RNMusicPlayer";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -641,6 +665,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-fetch-blob\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\realm\src/**",
 				);
 				INFOPLIST_FILE = "RNMusicPlayer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -666,6 +691,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-fetch-blob\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\realm\src/**",
 				);
 				INFOPLIST_FILE = "RNMusicPlayer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -720,6 +746,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-fetch-blob\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\realm\src/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -763,6 +790,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 					"$(SRCROOT)\..\node_modules\react-native-fetch-blob\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\realm\src/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;

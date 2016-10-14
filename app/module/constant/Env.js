@@ -13,7 +13,8 @@ const Env = {
   osWidth: width,
   osHeight: height,
   pixel: PixelRatio.get(),
-  serverURL: 'http://10.60.17.66:3000'
+  serverURL: 'http://10.60.17.66:3000',
+  env: 'mock'
 }
 
 export default Env

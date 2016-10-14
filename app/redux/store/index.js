@@ -22,7 +22,9 @@ let createAppStore = applyMiddleware(...middlewares)(createStore);
 
 
 function configureStore(onComplete: ()=>void){
-  const store = autoRehydrate({log: true})(createAppStore)(reducers);
+  const store = autoRehydrate()(createAppStore)(reducers);
+  //{log: true}  
+  //autoRehydrate()传入参数  {log: true}就可以输出一些日志信息
   let opt = {
     storage: AsyncStorage,
     transform: [],
