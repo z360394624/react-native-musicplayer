@@ -3,8 +3,8 @@
 # Tech
 - [x] react-native
 - [x] 引入数据状态管理redux
-- [ ] 引入数据库realm
-- [x] 引入redux持久库 redux-pressist(这个还不知道怎么用)
+- [x] 引入数据库realm
+- [x] 引入redux持久库 redux-pressist
 
 # Source
 - [x] 滚动tabview  https://github.com/skv-headless/react-native-scrollable-tab-view

@@ -5,7 +5,10 @@ import RNFetchBlob from 'react-native-fetch-blob'
 import autobind from 'autobind-decorator'
 import ScrollableTabView from 'react-native-scrollable-tab-view'
 import MusicPageTabBar from '../../components/music/MusicPageTabBar'
-
+import MusicRankPlan from './MusicRankPlan'
+import SongerFmPlan from './SongerFmPlan'
+import MusicListPlan from './MusicListPlan'
+import SuggestPlan from './SuggestPlan'
 
 
 // const dirs = RNFetchBlob.fs.dirs
@@ -22,7 +25,10 @@ export default class MusicPage extends Component{
       <View style={styles.container}>
         <ScrollableTabView
           renderTabBar={() => <MusicPageTabBar />}>
-
+          <SuggestPlan tabLabel="suggest"/>
+          <MusicListPlan tabLabel="list"/>
+          <SongerFmPlan tabLabel="fm"/>
+          <MusicRankPlan tabLabel="rank"/>
         </ScrollableTabView>
       </View>
     )
