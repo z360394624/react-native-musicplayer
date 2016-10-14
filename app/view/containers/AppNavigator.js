@@ -5,6 +5,9 @@ import FriendsPage from './user/FriendsPage'
 import { Provider } from 'react-redux'
 import { store } from '../../redux/store/index';
 import autobind from 'autobind-decorator'
+import FilePlanPage from './plan/FilePlanPage'
+
+
 
 export default class AppNavigator extends Component{
   constructor(){
@@ -22,12 +25,20 @@ export default class AppNavigator extends Component{
           <Navigator
             ref="navigator"
             initialRoute={{}}
-            configureScene={() => Navigator.SceneConfigs.FloatFromRight}
             renderScene={this.renderNavigator}>
           </Navigator>
       </Provider>
     )
   }
+  @autobind
+  renderToPlan(route, navigator){
+    switch (route.page) {
+      case 'fileplan': {
+        return (<FilePlanPage {...route} navigator={navigator}/>)
+      }
+    }
+  }
+  @autobind
   renderNavigator(route, navigator){
     if(route.tab){
       switch (route.tab) {
@@ -41,6 +52,10 @@ export default class AppNavigator extends Component{
           break
         case 'user': {
           return(<View></View>)
+        }
+          break
+        case 'plan': {
+          return this.renderToPlan(route, navigator)
         }
           break
         default: {

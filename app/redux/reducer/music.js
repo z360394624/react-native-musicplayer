@@ -2,7 +2,11 @@
 
 import * as Types from '../action/types'
 
-let initialMusic = {}
+let initialMusic = {
+  xx: 'xxx',
+  text:'content',
+  sss:'xxxxdsfsd'
+}
 
 export default function music(state = initialMusic, action){
   switch (action.type){

@@ -12,7 +12,6 @@ function DataRepository(){
 
 
 function fetchData (url) {
-  console.log(url)
   return new Promise((resolve, reject) => {
     fetch(url, {
       method: 'get',

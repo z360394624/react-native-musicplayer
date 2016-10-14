@@ -13,13 +13,13 @@ import uuid from 'node-uuid'
 import IntroTabBar from '../../components/introduce/IntroTabBar'
 import Button from 'apsl-react-native-button'
 
-CameraRoll.saveToCameraRoll('http://10.60.17.66:3000/welcome/welcomeSky.jpg')
-.then((data) => {
-  console.log(data)  
-})
-.catch((error) => {
-  console.log(error)
-})
+// CameraRoll.saveToCameraRoll('http://10.60.17.66:3000/welcome/welcomeSky.jpg')
+// .then((data) => {
+//   console.log(data)  
+// })
+// .catch((error) => {
+//   console.log(error)
+// })
 const api = new DataRepository()
 
 export default class WelcomePage extends Component{

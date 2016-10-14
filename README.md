@@ -21,9 +21,9 @@
 - [x] redux store自动化持久框架   https://github.com/rt2zz/redux-persist
 - [x] navbar组件库  https://github.com/react-native-community/react-native-navbar(个人认为这个还是自己写的好,方便定制)
 - [x] 图片等内容轮播组件  https://github.com/leecade/react-native-swiper
-- [x] 文件上传下载依赖库  https://github.com/wkh237/react-native-fetch-blob/wiki/File-System-Access-API#createfilepath-data-encodingpromise
+- [x] 文件上传下载依赖库  https://github.com/wkh237/react-native-fetch-blob/File-System-Access-API#createfilepath-data-encodingpromise
 - [x] 运行时权限给定库 https://github.com/lucasferreira/react-native-android-permissions
-- [x] 文件选择器控件  https://github.com/johanneslumpe/react-native-fs
+- [x] 文件操作库  https://github.com/johanneslumpe/react-native-fs(有上传(ios) 下载功能)
 - [x] 图片选择器控件  https://github.com/marcshilling/react-native-image-picker
 - [x] 炫酷弹出planblank窗口屏 https://github.com/kirkness/react-native-fs-modal
 
@@ -76,9 +76,16 @@
   - 在服务端预先处理好   转换成base64数据
   - {{uri: base64}}
   - 编码解码base64   https://github.com/riyadhalnur/node-base64-image/blob/master/docs/docs.md
+  
+### navigator的转场动画非常卡   
+  - 快关了远程调试呀   没错 就是这个原因
 
+
+### 关于redux-persist的一些坑
+  - 需要手动dispatch一次action才有效果  按道理讲初始化redux的dispatch应该触发(但是没有呀)
 
 ### 一些认识
   - [x] redux-persist 传入数据库引擎对象满足一定标准的就可以  然后就会进行操作
+  - [x] import Icon from 'react-native-vector-icons/Ionicons'  icon选自于Ionicons这个icon库集 可选的库有  Entypo  EvilIcons  FontAwesome  Foundation Ionicons MaterialIcons Octions Zocial SimpleLineIcons
 
 
