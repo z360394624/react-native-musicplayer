@@ -3,6 +3,8 @@ import React, { Component, PropTypes } from 'react'
 import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import MusicSwipe from '../../components/music/MusicSwipe'
+import SortBar from '../../components/music/SortBar'
+import SortBlock from '../../components/music/SortBlock'
 import Swiper from 'react-native-swiper'
 import Env from '../../../module/constant/Env'
 
@@ -17,6 +19,8 @@ export default class SuggestPlan extends Component{
         <View style={styles.wrapper}>
           <MusicSwipe />
         </View>
+        <SortBar />
+        <SortBlock />
       </View>
     )
   }
@@ -32,5 +36,5 @@ const styles = StyleSheet.create({
   img: {
     height:100,
     width:Env.osWidth
-  }
+  },
 })

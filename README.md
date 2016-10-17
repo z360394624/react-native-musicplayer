@@ -26,6 +26,7 @@
 - [x] 文件操作库  https://github.com/johanneslumpe/react-native-fs(有上传(ios) 下载功能)
 - [x] 图片选择器控件  https://github.com/marcshilling/react-native-image-picker
 - [x] 炫酷弹出planblank窗口屏 https://github.com/kirkness/react-native-fs-modal
+- [x] 关于推送通知的库 https://github.com/zo0r/react-native-push-notification
 
 # Demo
 - [x] 知乎日报移动版  https://github.com/race604/ZhiHuDaily-React-Native (ios and android)
@@ -42,6 +43,7 @@
   - 在使用react-native-swiper库的时候老是报loop undefined找不到原因，清楚项目，放在index下测试也不行，只好重开项目重新配置  就可以了，估计是安装什么东西的时候污染了。。。
   - scrollable-view-tab库两层嵌套的话  内部会出现渲染失效  必须在操作之后反应过来  这不行 需要改成平行的scrollview
   - react-native-swiper中的页脚定位是根据外层的不是swiper本身  所以有可能找不到  可以调整renderPagination  方法中视图的bottom样式 矫正定位
+  - 关于Notification的认知误区  一直以为它是单独的一个程序   原来是我们的应用发个消息体让系统帮我们在那边显示出来而已
 ### 启动白屏解决方案
   - 使用的是  https://github.com/crazycodeboy/react-native-splash-screen
   - 大部分配置和其他类库相似
