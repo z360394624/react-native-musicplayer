@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
+import { View, StyleSheet, ScrollView  } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 // import RNFetchBlob from 'react-native-fetch-blob'
 import autobind from 'autobind-decorator'
@@ -26,10 +26,10 @@ export default class MusicPage extends Component{
       <View style={styles.container}>
         <ScrollableTabView
           renderTabBar={() => <MusicPageTabBar />}>
-          <SuggestPlan tabLabel="suggest" navigator={navigator}/>
-          <MusicListPlan tabLabel="list"/>
-          <SongerFmPlan tabLabel="fm"/>
-          <MusicRankPlan tabLabel="rank"/>
+          <ScrollView tabLabel="suggest"><SuggestPlan navigator={navigator}/></ScrollView>
+          <ScrollView tabLabel="list"><MusicListPlan/></ScrollView>
+          <ScrollView tabLabel="fm"><SongerFmPlan /></ScrollView>
+          <ScrollView tabLabel="rank"><MusicRankPlan /></ScrollView>
         </ScrollableTabView>
       </View>
     )
