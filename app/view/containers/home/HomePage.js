@@ -55,7 +55,6 @@ export default class HomePage extends Component{
   }
   @autobind
   goToPage(index, module){
-    console.log("ge in", module)
     this.setState({activeTab: index, showModule: module})
   }
   @autobind

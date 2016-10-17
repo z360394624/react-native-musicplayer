@@ -15,7 +15,7 @@ export default class SuggestPlan extends Component{
     return(
       <View style={styles.container}>
         <View style={styles.wrapper}>
-          <Image style={styles.img} source={require('../../../src/img/slide3.jpg')}/>
+          <MusicSwipe />
         </View>
       </View>
     )
