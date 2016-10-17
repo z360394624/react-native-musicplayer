@@ -1,0 +1,9 @@
+{
+  "passPerPreset": true,
+  "presets": [
+    "react-native"
+  ],
+  "plugins": [
+    "transform-decorators-legacy"
+  ]
+}
