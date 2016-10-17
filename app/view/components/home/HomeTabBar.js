@@ -46,7 +46,7 @@ export default class HomeTabBar extends Component{
               <View style={[styles.tab]} key={uuid()}>
                 <TouchableHighlight
                   underlayColor='#109242'
-                  onPress={() => {this.goToPage(tabIndex)}}
+                  onPress={() => {this.goToPage(tabIndex, tab)}}
                   style={styles.touch}
                 >
                   <Icon name={iconName} size={32} color={activeTab == tabIndex ? "#ffffff" : '#a0bfad'}/>
@@ -77,9 +77,9 @@ export default class HomeTabBar extends Component{
 
   }
   @autobind
-  goToPage(tabIndex){
+  goToPage(tabIndex, module){
     const { goToPage } = this.props
-    goToPage(tabIndex)
+    goToPage(tabIndex, module)
   }
 }
 

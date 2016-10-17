@@ -10,7 +10,7 @@ export default class MusicRankPlan extends Component{
   }
   render(){
     return(
-      <View style={styles.container}></View>
+      <View style={styles.container}><Text>rank</Text></View>
     )
   }
 }

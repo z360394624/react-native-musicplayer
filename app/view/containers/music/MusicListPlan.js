@@ -10,7 +10,7 @@ export default class MusicListPlan extends Component{
   }
   render(){
     return(
-      <View style={styles.container}></View>
+      <View style={styles.container}><Text>list</Text></View>
     )
   }
 }

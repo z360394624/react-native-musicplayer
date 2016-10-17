@@ -22,6 +22,12 @@ import realm from '../../../realm/realm'
 export default class HomePage extends Component{
   constructor(){
     super()
+
+    this.state = {
+      showModule: 'music',
+      tabs:["music", 'local', 'user'],
+      activeTab: 0
+    }
   }
 
   componentDidMount(){
@@ -32,29 +38,47 @@ export default class HomePage extends Component{
     })
 
     let cars = realm.objects('Car')
-    console.log(cars.length)
-    console.log(cars[0].driver_name)
   }
   render(){
+    const { tabs, activeTab } = this.state
     return(
       <DrawerLayoutAndroid
         ref="drawer"
         drawerWidth={300}
         drawerPosition={DrawerLayoutAndroid.positions.Left}
         renderNavigationView={() => <Drawer />}>
-          <ScrollableTabView
-            renderTabBar={() => <HomeTabBar showDrawer={this.showDrawer}/>}>
-            <MusicPage tabLabel="music" navigator={this.props.navigator}/>
-            <LocalPage tabLabel="local"/>
-            <UserPage tabLabel="user"/>
-          </ScrollableTabView>
-          <Player />
+          <HomeTabBar activeTab={activeTab} tabs={tabs} goToPage={(index, module) => {this.goToPage(index, module)}}/>
+          {this.renderModule()}
+          <Player navigator={this.props.navigator}/>
         </DrawerLayoutAndroid>
     )
   }
   @autobind
+  goToPage(index, module){
+    console.log("ge in", module)
+    this.setState({activeTab: index, showModule: module})
+  }
+  @autobind
   showDrawer(){
     this.refs.drawer.openDrawer()
+  }
+  @autobind
+  renderModule(){
+    const navigator = this.props.navigator
+    const showModule = this.state.showModule
+    switch (showModule) {
+      case 'music':{
+        return(<MusicPage navigator={navigator}/>)
+      }
+        break
+      case 'local': {
+        return(<LocalPage navigator={navigator}/>)
+      }
+        break
+      case 'user': {
+        return(<UserPage navigator={navigator}/>)
+      }
+    }          
   }
 }
 

@@ -33,7 +33,7 @@ export default class RNMusicPlayer extends Component {
       this.setState({introList: data.data, showModule: 'introPage'})
     })
     .catch((error) => {
-      showToast('拉取数据失败，请检查网络连接')
+      // showToast('拉取数据失败，请检查网络连接')
     })
   }
   render(){

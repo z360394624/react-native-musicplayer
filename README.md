@@ -39,7 +39,8 @@
   - overlay permissions needs to be granted in order for react native apps to run in dev mode   需要开启悬浮窗权限
   - could not connect to development server   adb reverse tcp:8081 tcp:8081
   - 关于简书上的一些解决方案  http://www.jianshu.com/p/d1f15da51317
-
+  - 在使用react-native-swiper库的时候老是报loop undefined找不到原因，清楚项目，放在index下测试也不行，只好重开项目重新配置  就可以了，估计是安装什么东西的时候污染了。。。
+  - scrollable-view-tab库两层嵌套的话  内部会出现渲染失效  必须在操作之后反应过来  这不行 需要改成平行的scrollview
 ### 启动白屏解决方案
   - 使用的是  https://github.com/crazycodeboy/react-native-splash-screen
   - 大部分配置和其他类库相似

@@ -21,11 +21,12 @@ export default class MusicPage extends Component{
     super()
   }
   render(){
+    const navigator = this.props.navigator
     return(
       <View style={styles.container}>
         <ScrollableTabView
           renderTabBar={() => <MusicPageTabBar />}>
-          <SuggestPlan tabLabel="suggest"/>
+          <SuggestPlan tabLabel="suggest" navigator={navigator}/>
           <MusicListPlan tabLabel="list"/>
           <SongerFmPlan tabLabel="fm"/>
           <MusicRankPlan tabLabel="rank"/>
