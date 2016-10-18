@@ -48,6 +48,7 @@
   - 组件的show和hide尽量全靠自己的state来实现   数据的状态有store的state来展示
   - 子组件的change没有反应到父组件，留下空白区域  应该事先计算好高度
   - realm会引起一些调试问题  暂时挂起
+  - react-native-scrollable-tab-view出现cannot read property of undefined  改源码  所有关于判断os的都提取出ios内部代码 舍去其他部分
 
 
 ### 启动白屏解决方案

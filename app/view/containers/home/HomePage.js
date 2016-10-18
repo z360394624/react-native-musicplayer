@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { View, Text, StyleSheet, TouchableHighlight, DrawerLayoutAndroid, AsyncStorage  } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight, DrawerLayoutAndroid, AsyncStorage, BackAndroid  } from 'react-native'
 import { connect } from 'react-redux'
 import autobind from 'autobind-decorator'
 import Drawer from '../../components/home/Drawer'
@@ -10,9 +10,24 @@ import LocalPage from '../local/LocalPage'
 import UserPage from '../user/UserPage'
 import Player from '../../components/player/Player'
 // import realm from '../../../realm/realm'
+import showToast from '../../components/toast/Toast'
+// var _navigator
+// var dink = Date.now()
 
-
-
+// BackAndroid.addEventListener('hardwareBackPress',() => {
+//   if (_navigator && _navigator.getCurrentRoutes().length > 1){
+//     _navigator.pop()
+//     return true
+//   }
+//   if (_navigator.getCurrentRoutes().length == 1){
+//     const timer = Date.now()
+//     if((timer - dink) < 1000){
+//       return false
+//     }
+//     dink = timer    
+//     showToast("再按一次退出应用")
+//   }
+// })
 
 @connect((state) => {
   return{
@@ -31,6 +46,7 @@ export default class HomePage extends Component{
   }
 
   componentDidMount(){
+    _navigator = this.props.navigator
     // realm.write(() => {
     //   // realm.create('Car', {id: 1, car_type:'QQ', car_name: 'sb001', driver_name:'pdd'})
     //   // realm.create('Car', {id: 2, car_type: '宝马', car_name: 'SB002', driver_name: '李四'});
