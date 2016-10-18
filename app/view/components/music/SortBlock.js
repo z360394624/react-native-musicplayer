@@ -90,9 +90,7 @@ export default class SortBlock extends Component{
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop:20,
-    paddingLeft:20,
-    paddingRight:20,
+    padding:20
   },
   titleBar: {
     flexDirection:'row',

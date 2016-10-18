@@ -27,6 +27,7 @@
 - [x] 图片选择器控件  https://github.com/marcshilling/react-native-image-picker
 - [x] 炫酷弹出planblank窗口屏 https://github.com/kirkness/react-native-fs-modal
 - [x] 关于推送通知的库 https://github.com/zo0r/react-native-push-notification
+- [x] 关于毛玻璃效果的实现库 https://github.com/react-native-community/react-native-blur
 
 # Demo
 - [x] 知乎日报移动版  https://github.com/race604/ZhiHuDaily-React-Native (ios and android)

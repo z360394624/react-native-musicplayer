@@ -17,6 +17,6 @@ export default class MusicRankPlan extends Component{
 
 const styles = StyleSheet.create({
   container: {
-    
+    flex:1
   }
 })

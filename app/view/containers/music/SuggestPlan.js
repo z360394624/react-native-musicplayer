@@ -30,7 +30,8 @@ export default class SuggestPlan extends Component{
         <View style={styles.buttonNav}>
           <TouchableHighlight
             style={styles.buttonTou}
-            onPress={this.turnToPage}>
+            onPress={this.turnToPage}
+            underlayColor="#ffffff">
               <View style={styles.button}>
                 <Text style={styles.text}>点击调整栏目</Text>
               </View>
