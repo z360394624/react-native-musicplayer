@@ -45,6 +45,11 @@
   - scrollable-view-tab库两层嵌套的话  内部会出现渲染失效  必须在操作之后反应过来  这不行 需要改成平行的scrollview
   - react-native-swiper中的页脚定位是根据外层的不是swiper本身  所以有可能找不到  可以调整renderPagination  方法中视图的bottom样式 矫正定位
   - 关于Notification的认知误区  一直以为它是单独的一个程序   原来是我们的应用发个消息体让系统帮我们在那边显示出来而已
+  - 组件的show和hide尽量全靠自己的state来实现   数据的状态有store的state来展示
+  - 子组件的change没有反应到父组件，留下空白区域  应该事先计算好高度
+  - realm会引起一些调试问题  暂时挂起
+
+
 ### 启动白屏解决方案
   - 使用的是  https://github.com/crazycodeboy/react-native-splash-screen
   - 大部分配置和其他类库相似
