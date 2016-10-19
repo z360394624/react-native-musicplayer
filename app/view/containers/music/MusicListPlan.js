@@ -1,19 +1,54 @@
 import React, { Component, PropTypes } from 'react'
-import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight, Image, ListView, RefreshControl } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import autobind from 'autobind-decorator'
 import ListBlock from '../../components/music/ListBlock'
 
+import DataRepository from '../../../module/dao/api'
+import { suggestlistdata } from '../../../module/mock/musicpage'
+const api = new DataRepository()
 
-
+var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
 export default class MusicListPlan extends Component{
 
   constructor(){
     super()
+    
+    this.state = {
+      dataSource: ds.cloneWithRows(suggestlistdata),
+      isRefreshing: false
+    }
   }
   render(){
     return(
       <View style={styles.container}>
+        {
+          this.state.dataSource && (
+            <ListView
+              refreshControl={
+                <RefreshControl 
+                  refreshing={this.state.isRefreshing}
+                  onRefresh={this.onRefresh}
+                  tintColor="#ff0000"
+                  title="Loading..."
+                  titleColor="#00ff00"
+                  colors={['#1ff371']}
+                  progressBackgroundColor="#ffffff"
+                  />
+              }
+              dataSource={this.state.dataSource}
+              renderHeader={this.renderHeader}
+              renderRow={this.renderListViewRow}
+            ></ListView>
+          )
+        }
+      </View>
+    )
+  }
+  @autobind
+  renderHeader(){
+    return(
+      <View style={styles.headerContainer}>
         <View style={styles.titleBar}>
           <View style={[styles.textNav, {justifyContent: 'center'}]}>
             <Text style={styles.title}>  全部歌单</Text>
@@ -40,18 +75,25 @@ export default class MusicListPlan extends Component{
             <View style={styles.fineRight}><Icon name="md-arrow-forward" color="#767983" size={32}/></View>
           </View>
         </TouchableHighlight>
-        <ListBlock />
-        <ListBlock />
-        <ListBlock />
-        <ListBlock />
-        <ListBlock />
-        <ListBlock />
       </View>
     )
   }
   @autobind
   turnToPage(){
 
+  }
+  @autobind
+  renderListViewRow(rowData){
+    return(<ListBlock />)
+  }
+  @autobind
+  onRefresh(){
+    this.setState({isRefreshing: true})
+    console.log('refresh')
+  }
+  @autobind
+  onEndReachedBottom(){
+    console.log('get in')
   }
 }
 
@@ -60,6 +102,9 @@ const styles = StyleSheet.create({
     flex:1,
     padding:20,
     backgroundColor:'#f4fafd'
+  },
+  headerContainer: {
+    height:110,
   },
   titleBar: {
     flexDirection:'row',

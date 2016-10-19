@@ -2,6 +2,8 @@
 
 import Env from '../constant/Env'
 const API_URL_IntroduceList = `${Env.serverURL}/RNMusicPlayer/introducelist`
+const API_URL_musicpageListPlan = `${Env.serverURL}/musicpage/suggestplan/listdata`
+
 
 function DataRepository(){
   if (typeof DataRepository.instance === 'object'){
@@ -29,5 +31,9 @@ function fetchData (url) {
 
 DataRepository.prototype.fetchIntroduce = function () {
   return fetchData(API_URL_IntroduceList)
+}
+
+DataRepository.prototype.fetchMusicpageListPlan = function () {
+  return fetchData(API_URL_musicpageListPlan)
 }
 module.exports = DataRepository

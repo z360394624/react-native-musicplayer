@@ -27,7 +27,7 @@ export default class MusicPage extends Component{
         <ScrollableTabView
           renderTabBar={() => <MusicPageTabBar />}>
           <ScrollView tabLabel="suggest"><SuggestPlan navigator={navigator}/></ScrollView>
-          <ScrollView tabLabel="list"><MusicListPlan/></ScrollView>
+          <MusicListPlan tabLabel="list"/>
           <ScrollView tabLabel="fm"><SongerFmPlan /></ScrollView>
           <ScrollView tabLabel="rank"><MusicRankPlan /></ScrollView>
         </ScrollableTabView>

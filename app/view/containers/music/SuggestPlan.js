@@ -8,7 +8,9 @@ import SortBlock from '../../components/music/SortBlock'
 import Swiper from 'react-native-swiper'
 import Env from '../../../module/constant/Env'
 import autobind from 'autobind-decorator'
-
+// <View style={styles.wrapper}>
+//           <MusicSwipe />
+//         </View>
 
 export default class SuggestPlan extends Component{
 
@@ -18,9 +20,6 @@ export default class SuggestPlan extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <View style={styles.wrapper}>
-          <MusicSwipe />
-        </View>
         <SortBar />
         <SortBlock />
         <SortBlock />

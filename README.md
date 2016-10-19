@@ -28,6 +28,12 @@
 - [x] 炫酷弹出planblank窗口屏 https://github.com/kirkness/react-native-fs-modal
 - [x] 关于推送通知的库 https://github.com/zo0r/react-native-push-notification
 - [x] 关于毛玻璃效果的实现库 https://github.com/react-native-community/react-native-blur
+- [x] 关于炫酷Textinput效果的库 https://github.com/halilb/react-native-textinput-effects
+- [x] 关于播放video的库  https://github.com/react-native-community/react-native-video
+- [x] 下拉刷新组件库 https://github.com/jsdf/react-native-refreshable-listview
+- [x] 极客学院docs  http://wiki.jikexueyuan.com/project/react-native/pan-responder.html
+- [x] 设备信息获取库  https://github.com/rebeccahughes/react-native-device-info
+
 
 # Demo
 - [x] 知乎日报移动版  https://github.com/race604/ZhiHuDaily-React-Native (ios and android)
@@ -49,6 +55,9 @@
   - 子组件的change没有反应到父组件，留下空白区域  应该事先计算好高度
   - realm会引起一些调试问题  暂时挂起
   - react-native-scrollable-tab-view出现cannot read property of undefined  改源码  所有关于判断os的都提取出ios内部代码 舍去其他部分
+  - 关于实现上拉刷新的问题   http://blog.csdn.net/codetomylaw/article/details/52235206
+  - AndroidSudio 报错  Exception in thread "png-cruncher_21" java.lang.RuntimeException: Timed out while waiting  环境变量加上这个 SLAVE_AAPT_TIMEOUT = 30
+  - ScrollView内嵌ScrollView性质的组件   一些属性会被外层吃掉  比如刷新  取的是外层效果
 
 
 ### 启动白屏解决方案

@@ -10,6 +10,10 @@ var fs = require('fs')
 var path = require('path')
 var formidable = require('formidable')
 var util = require('util')
+var musicpage = require('../mock/musicpage')
+
+
+
 
 router.get('/RNMusicPlayer/introducelist', function(req, res, next) {
   logger.info('get approve rout  get get get')
@@ -52,6 +56,16 @@ router.get('/files', function (req, res, next) {
       res.end('当前目录下没有文件');
     }
   });
+})
+
+
+router.get('/musicpage/suggestplan/listdata', function (req, res, next) {
+  var data = musicpage.suggestlistdata
+  res.send({
+    status: 200,
+    data: data,
+    message: 'success'
+  })
 })
 
 router.get('/download', function (req, res, next) {
