@@ -63,7 +63,7 @@ export default class HomePage extends Component{
         drawerWidth={300}
         drawerPosition={DrawerLayoutAndroid.positions.Left}
         renderNavigationView={() => <Drawer />}>
-          <HomeTabBar activeTab={activeTab} tabs={tabs} goToPage={(index, module) => {this.goToPage(index, module)}}/>
+          <HomeTabBar showDrawer={this.showDrawer} activeTab={activeTab} tabs={tabs} goToPage={(index, module) => {this.goToPage(index, module)}}/>
           {this.renderModule()}
           <Player navigator={this.props.navigator}/>
         </DrawerLayoutAndroid>
