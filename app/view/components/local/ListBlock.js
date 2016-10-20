@@ -119,7 +119,9 @@ const styles = StyleSheet.create({
   },
   listContent: {
     flex:1,
-    flexDirection:'column'
+    flexDirection:'column',
+    borderBottomWidth:2,
+    borderColor:'#cccccc'
   },
   listRight: {
     width:60,

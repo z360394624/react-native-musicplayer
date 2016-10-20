@@ -28,13 +28,13 @@ export default class RNMusicPlayer extends Component {
   }
 
   fetchData(){
-    api.fetchIntroduce()
-    .then((data) => {
-      this.setState({introList: data.data, showModule: 'introPage'})
-    })
-    .catch((error) => {
-      // showToast('拉取数据失败，请检查网络连接')
-    })
+    // api.fetchIntroduce()
+    // .then((data) => {
+    //   this.setState({introList: data.data, showModule: 'introPage'})
+    // })
+    // .catch((error) => {
+    //   // showToast('拉取数据失败，请检查网络连接')
+    // })
   }
   render(){
     const introList = this.state.introList
@@ -55,7 +55,7 @@ export default class RNMusicPlayer extends Component {
   }
   @autobind
   changeState(module){
-    this.setState({showModule:module})
+    // this.setState({showModule:module})
   }
 }
 

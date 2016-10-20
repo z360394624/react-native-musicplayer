@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Navigator, View } from 'react-native'
 import HomePage from './home/HomePage'
-import FriendsPage from './user/FriendsPage'
 import { Provider } from 'react-redux'
 import { store } from '../../redux/store/index';
 import autobind from 'autobind-decorator'
@@ -29,6 +28,12 @@ export default class AppNavigator extends Component{
           </Navigator>
       </Provider>
     )
+  }
+  @autobind
+  renderToMusic(route, navigator){
+    // switch (route.page) {
+    //   case ''
+    // }
   }
   @autobind
   renderToPlan(route, navigator){

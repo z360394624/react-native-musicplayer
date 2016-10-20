@@ -1,4 +1,7 @@
 # show
+![img](./app/src/gif/RNMusicPlayer.gif)
+
+
 
 # Tech
 - [x] react-native
