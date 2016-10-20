@@ -20,6 +20,9 @@ export default class SuggestPlan extends Component{
   render(){
     return(
       <View style={styles.container}>
+        <View style={styles.wrapper}>
+          <MusicSwipe />
+        </View>
         <SortBar />
         <SortBlock />
         <SortBlock />

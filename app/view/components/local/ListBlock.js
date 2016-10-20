@@ -116,18 +116,21 @@ const styles = StyleSheet.create({
   listLeft: {
     width:70,
     height:70,
+    padding:5
   },
   listContent: {
     flex:1,
     flexDirection:'column',
-    borderBottomWidth:2,
+    borderBottomWidth:1,
     borderColor:'#cccccc'
   },
   listRight: {
     width:60,
     height:70,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    borderBottomWidth:1,
+    borderColor:'#cccccc'
   },
   listImg: {
     width:70,

@@ -36,6 +36,8 @@
 - [x] 下拉刷新组件库 https://github.com/jsdf/react-native-refreshable-listview
 - [x] 极客学院docs  http://wiki.jikexueyuan.com/project/react-native/pan-responder.html
 - [x] 设备信息获取库  https://github.com/rebeccahughes/react-native-device-info
+- [x] 滑动显示操作按钮的label  https://github.com/jemise111/react-native-swipe-list-view
+ 
 
 
 # Demo
