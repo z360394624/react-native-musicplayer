@@ -37,8 +37,8 @@
 - [x] 极客学院docs  http://wiki.jikexueyuan.com/project/react-native/pan-responder.html
 - [x] 设备信息获取库  https://github.com/rebeccahughes/react-native-device-info
 - [x] 滑动显示操作按钮的label  https://github.com/jemise111/react-native-swipe-list-view
- 
-
+- [x] 获取image  可以实现定好宽高的     https://github.com/ivpusic/react-native-image-crop-picker
+- [x] 关于rxjs  http://www.tuicool.com/articles/zYruaiU
 
 # Demo
 - [x] 知乎日报移动版  https://github.com/race604/ZhiHuDaily-React-Native (ios and android)
@@ -63,6 +63,7 @@
   - 关于实现上拉刷新的问题   http://blog.csdn.net/codetomylaw/article/details/52235206
   - AndroidSudio 报错  Exception in thread "png-cruncher_21" java.lang.RuntimeException: Timed out while waiting  环境变量加上这个 SLAVE_AAPT_TIMEOUT = 30
   - ScrollView内嵌ScrollView性质的组件   一些属性会被外层吃掉  比如刷新  取的是外层效果
+  - 如果需要打包apk最好一步一步添加并且测试
 
 
 ### 启动白屏解决方案
