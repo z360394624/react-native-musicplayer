@@ -1,6 +1,6 @@
 'use strict'
 
-import * as Types from '../action/types'
+import { MOUNT_MUSIC, PULL_MUSIC_DONE } from '../actions/TYPES'
 
 let initialMusic = {
   xx: 'xxx',
@@ -10,10 +10,10 @@ let initialMusic = {
 
 export default function music(state = initialMusic, action){
   switch (action.type){
-    case Types.MUSIC:{
+    case PULL_MUSIC_DONE:{
       return {
         ...state,
-        musiclist: action.musiclist
+        musiclist: action.data
       }
     }
       break

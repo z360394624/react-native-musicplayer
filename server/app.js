@@ -12,6 +12,9 @@ var _ = require('lodash')
 var middleware = require('./middlewares')
 var session = require('express-session')
 var RedisStore = require('connect-redis')(session)
+var wf = require('./mock/wf')
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
@@ -65,6 +68,13 @@ app.use(function(err, req, res, next) {
   // console.log(err)
   // res.render('error', {title: '查询失败', message: '可能是网络等原因'})
 });
+
+
+
+var nconf = require('nconf')
+nconf.argv().env().file({file: __dirname +'/data.json'})
+nconf.set("xx", wf)
+nconf.save()
 
 
 module.exports = app;

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
 import music from './music'
-import globalcon from './globalcon'
+import navigator from './navigator'
 
 export default combineReducers({
   music: music,
-  globalcon: globalcon
+  navigator: navigator
 })

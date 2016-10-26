@@ -1,39 +1,41 @@
-
-import {applyMiddleware, createStore} from 'redux';
-import thunk from 'redux-thunk';
-import {persistStore, autoRehydrate} from 'redux-persist';
-import { AsyncStorage } from 'react-native';
-import reducers from '../reducer';
-
-const logger = store => next => action => {
-  if(typeof action === 'function') console.log('dispatching a function');
-  else console.log('dispatching', action);
-  let result = next(action);
-  // console.log('next state', store.getState());
-  return result;
-}
-
-let middlewares = [
-  logger,
-  thunk
-];
-
-let createAppStore = applyMiddleware(...middlewares)(createStore);
+/**
+ * Created by alvin.liu on 2016/10/9.
+ */
 
 
-function configureStore(onComplete: ()=>void){
-  const store = autoRehydrate()(createAppStore)(reducers);
-  //{log: true}  
-  //autoRehydrate()传入参数  {log: true}就可以输出一些日志信息
-  let opt = {
+import { AsyncStorage } from 'react-native'
+// import realmStorage from '../api/dao'
+import { applyMiddleware, createStore } from 'redux'
+import { createEpicMiddleware } from 'redux-observable'
+import createLogger from 'redux-logger'
+import { persistStore, autoRehydrate } from 'redux-persist'
+import reducers from '../reducers'
+import epics from '../epics'
+const isDebuggingInChrome = __DEV__ && !!window.navigator.userAgent
+
+const logger = createLogger({
+  predicate: (getState, action) => isDebuggingInChrome,
+  collapsed: true,
+  duration: true,
+})
+const epicMiddleware = createEpicMiddleware(epics)
+const thisCreateStore = applyMiddleware(epicMiddleware, logger)(createStore)
+
+export default function configureStore (onComplete) {
+  const store = autoRehydrate({log: false})(thisCreateStore)(reducers)
+  const persistConfig = {
     storage: AsyncStorage,
-    transform: [],
-    //whitelist: ['userStore'],
-  };
-  persistStore(store, opt, onComplete);
-  return store;
+    // whitelist: ['currentUser'],  // 开发时保留
+    blacklist: [
+      'navigation',
+      'navigator',
+      'currentUser',
+      'electronflow'
+    ],
+  }
+  const persistor = persistStore(store, persistConfig, onComplete)
+  if (isDebuggingInChrome) {
+    window.store = store
+  }
+  return store
 }
-export const store = configureStore()
-let getState = store.getState
-let disPatch = store.disPatch
-export { getState, disPatch }
