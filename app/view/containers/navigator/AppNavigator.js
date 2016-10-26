@@ -7,8 +7,6 @@ import {
   View,
   Navigator,
   StyleSheet,
-  Platform,
-  BackAndroid,
   Text
 } from 'react-native'
 import autobind from 'autobind-decorator'
@@ -23,12 +21,15 @@ import renderMusicPage from './music'
 import renderLocalPage from './local'
 import renderUserPage from './user'
 import renderPlanPage from './plan'
+import Env from '../../../module/constants/Env'
+import showToast from '../../components/common/Toast'
 
+let BackAndroid = null
+if(Env.os !== 'ios'){
+  BackAndroid = require('react-native').BackAndroid
+}
 
-
-
-
-
+let tick = Date.now()
 
 @connect(
   (state) => {
@@ -49,27 +50,38 @@ export default class AppNavigator extends Component {
 
 
 
-  // 硬件返回按钮事件监听
-  // componentDidMount () {
-  //   BackAndroid.addEventListener('hardwareBackPress', this.handleBackButton)
-  // }
+  // // 硬件返回按钮事件监听
+  componentDidMount () {
+    if(Env.os !== 'ios'){
+      BackAndroid.addEventListener('hardwareBackPress', this.handleBackButton)
+    }
+  }
 
-  // componentWillUnmount () {
-  //   BackAndroid.removeEventListener('hardwareBackPress', this.handleBackButton)
-  // }
+  componentWillUnmount () {
+    if(Env.os !== 'ios'){
+      BackAndroid.removeEventListener('hardwareBackPress', this.handleBackButton)
+    }
+  }
 
-  // @autobind
-  // handleBackButton () {
-  //   // 处理navigator的导航
-  //   const {navigator} = this.refs
-  //   if (navigator && navigator.getCurrentRoutes().length > 1) {
-  //     navigator.pop()
-  //     return true
-  //   }
-  //   //这边可以加上二次返回提醒
-  //   // 最终返回系统菜单
-  //   return false
-  // }
+  @autobind
+  handleBackButton () {
+    // 处理navigator的导航
+    const {navigator} = this.refs
+    if (navigator && navigator.getCurrentRoutes().length > 1) {
+      navigator.pop()
+      return true
+    }
+    //这边可以加上二次返回提醒
+    // 最终返回系统菜单
+    let nowTime = Date.now()
+    if(nowTime - tick <= 1500){
+      return false
+    }else{
+      tick = nowTime
+      showToast("再次点击将推出应用")
+      return true
+    }
+  }
 
   render () {
     return (

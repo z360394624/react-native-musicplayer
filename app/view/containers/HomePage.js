@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view'
-import uuid from 'node-uuid'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import autobind from 'autobind-decorator'
@@ -28,7 +27,7 @@ export default class HomePage extends Component{
   render(){
     return(
       <View style={styles.container}>
-      <Text>homepage</Text>
+        
       </View>
     )
   }

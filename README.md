@@ -120,3 +120,7 @@
   - 最近新出的数据库realm  一个字  牛逼   react-native版  https://github.com/realm/realm-js
   - 修饰包裹tealm的api衔接redux-persist  会丢失很大部分realm原生的api  这个要进行优化处理
   - 一般数据库操作js必定回调   这个不用  你没听错  这个不用  就是当做同步的来跑
+
+### 关于报错  Native component for 'RCTMap' does not exist
+  - 触发条件就是  import * as RN from 'react-native'  use RN do something
+  - 可能原因就是这样的引入方式把过时的 销毁的api给带进来了

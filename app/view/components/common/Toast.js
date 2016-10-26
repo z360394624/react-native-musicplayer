@@ -9,5 +9,5 @@ export default function showToast(text) {
     return
   }
   const ToastAndroid = RN.ToastAndroid
-  ToastAndroid.showWithGravity(text, 1000, ToastAndroid.CENTER)
+  ToastAndroid.showWithGravity(text, 1500, ToastAndroid.CENTER)
 }
