@@ -63,7 +63,7 @@
   - 关于实现上拉刷新的问题   http://blog.csdn.net/codetomylaw/article/details/52235206
   - AndroidSudio 报错  Exception in thread "png-cruncher_21" java.lang.RuntimeException: Timed out while waiting  环境变量加上这个 SLAVE_AAPT_TIMEOUT = 30
   - ScrollView内嵌ScrollView性质的组件   一些属性会被外层吃掉  比如刷新  取的是外层效果
-  - 如果需要打包apk最好一步一步添加并且测试
+  - 非常容易出现调试是OK的 但是打包安装后总是出现闪退  如果需要打包apk最好一步一步添加并且测试
 
 
 ### 启动白屏解决方案
