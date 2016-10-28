@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native
 import Icon from 'react-native-vector-icons/Ionicons'
 // import RNFS from 'react-native-fs'
 // import RNFetchBlob from 'react-native-fetch-blob'
-import Env from '../../../module/constant/Env'
+import Env from '../../../module/constants/Env'
 
 
 // RNFS.readdir('/storage/emulated/0/Pictures/Screenshots')

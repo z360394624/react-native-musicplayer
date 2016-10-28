@@ -4,9 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import autobind from 'autobind-decorator'
 import ListBlock from '../../components/music/ListBlock'
 
-import DataRepository from '../../../module/dao/api'
 import { suggestlistdata } from '../../../module/mock/musicpage'
-const api = new DataRepository()
 
 var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
 export default class MusicListPlan extends Component{

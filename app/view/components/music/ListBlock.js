@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import autobind from 'autobind-decorator'
-import Env from '../../../module/constant/Env'
+import Env from '../../../module/constants/Env'
 
 
 itemWidth = (Env.osWidth-60)/2

@@ -3,11 +3,18 @@ import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native
 import Icon from 'react-native-vector-icons/Ionicons'
 import autobind from 'autobind-decorator'
 import uuid from 'uuid'
-import Env from '../../../module/constant/Env'
+import Env from '../../../module/constants/Env'
+import { connect } from 'react-redux'
+import { checkColor } from '../../../module/api/color'
 
 
-paddingBar = (Env.osWidth-100-130)/2
+paddingBar = (Env.osWidth-100-150)/2
 
+@connect((state) => {
+  return{
+    skin: state.skin
+  }
+})
 export default class HomeTabBar extends Component{
 
   constructor(){
@@ -15,11 +22,13 @@ export default class HomeTabBar extends Component{
   }
   render(){
     const { tabs, activeTab, goToPage } = this.props
+    const { red, green, blue } = this.props.skin
+    const color = `rgb(${red}, ${green}, ${blue})`
     return(
-      <View style={styles.container}>
+      <View style={[styles.container, {backgroundColor: color}]}>
         <View style={styles.drawerNav}>
           <TouchableHighlight
-            underlayColor="#109242"
+            underlayColor={color}
             style={styles.touch}
             onPress={this.showDrawer}>
             <Icon size={28} name="md-menu" color="#ffffff"/>
@@ -31,7 +40,7 @@ export default class HomeTabBar extends Component{
             let iconName = ''
             switch (tab) {
               case 'music': {
-                iconName = 'ios-musical-notes-outline'
+                iconName = "ios-musical-notes-outline"
               }
                 break
               case 'local': {
@@ -45,11 +54,11 @@ export default class HomeTabBar extends Component{
             return(
               <View style={[styles.tab]} key={uuid()}>
                 <TouchableHighlight
-                  underlayColor='#109242'
+                  underlayColor={color}
                   onPress={() => {this.goToPage(tabIndex, tab)}}
                   style={styles.touch}
                 >
-                  <Icon name={iconName} size={32} color={activeTab == tabIndex ? "#ffffff" : '#a0bfad'}/>
+                  <Icon name={iconName} size={32} color={activeTab == tabIndex ? '#cccccc' : '#ffffff'}/>
                 </TouchableHighlight>
               </View>
             )
@@ -58,7 +67,7 @@ export default class HomeTabBar extends Component{
         </View>
         <View style={styles.searchNav}>
           <TouchableHighlight
-            underlayColor="#109242"
+            underlayColor={color}
             style={styles.touch}
             onPress={this.showSearchPage}>
             <Icon size={28} name="md-search" color="#ffffff"/>
@@ -86,7 +95,6 @@ export default class HomeTabBar extends Component{
 const styles = StyleSheet.create({
   container: {
     height:50,
-    backgroundColor:'#1ff371',
     flexDirection:'row'
   },
   drawerNav: {

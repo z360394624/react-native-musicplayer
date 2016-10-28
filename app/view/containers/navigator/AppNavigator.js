@@ -24,6 +24,9 @@ import renderPlanPage from './plan'
 import Env from '../../../module/constants/Env'
 import showToast from '../../components/common/Toast'
 
+
+
+
 let BackAndroid = null
 if(Env.os !== 'ios'){
   BackAndroid = require('react-native').BackAndroid

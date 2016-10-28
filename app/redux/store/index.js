@@ -4,7 +4,6 @@
 
 
 import { AsyncStorage } from 'react-native'
-// import realmStorage from '../api/dao'
 import { applyMiddleware, createStore } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
 import createLogger from 'redux-logger'
@@ -30,7 +29,7 @@ export default function configureStore (onComplete) {
       'navigation',
       'navigator',
       'currentUser',
-      'electronflow'
+      'skin'
     ],
   }
   const persistor = persistStore(store, persistConfig, onComplete)

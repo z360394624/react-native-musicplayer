@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { View, Text, StyleSheet, TouchableHighlight, Image  } from 'react-native'
 import Evicon from 'react-native-vector-icons/EvilIcons'
 import Icon from 'react-native-vector-icons/Ionicons'
-import Env from '../../../module/constant/Env'
+import Env from '../../../module/constants/Env'
 import autobind from 'autobind-decorator'
 import Avatar from '../Avatar'
 
